@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card__title"> {{index}}. {{ arrayQuestion[0].title }} </div>
+  <card-answer
+    *ngFor="let answer of arrayQuestion"
+    [answer]="answer"
+    [length]="length"
+    [index]="index"
+    [show]="showAnswer.showAnswer"
+  >
+  </card-answer>
+  <div class="card__relative-items">
+    <input class="card__input" type="text" placeholder="leave a comment" #myInput (input)="inputHandler(myInput.value)" (blur)="clear && clear($event)">
+    <button
+      class="card__button"
+      (click)="checkAnswer()"
+    >
+      {{ showAnswer.showAnswer ? 'hide' : 'check' }}
+    </button>
+  </div>
+  <p class="card__comment"> {{ comment }} </p>
+</div>

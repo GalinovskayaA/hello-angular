@@ -1,0 +1,91 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+  overflow: hidden;
+
+  &__toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+
+    img {
+      margin: 0 16px;
+    }
+  }
+
+  &__toolbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__main-title {
+    margin: 40px auto 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__user-name {
+    margin-right: 1rem;
+    font-weight: 500;
+    color: white;
+  }
+
+  &__date {
+    margin: 0 0 20px;
+    text-align: right;
+  }
+
+  &__block-result {
+    width: 70%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  &__button {
+    min-width: 120px;
+    margin-right: 25px;
+    padding: 0.7rem 1.4rem;
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  &__result {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+
+}

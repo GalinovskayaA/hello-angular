@@ -1,0 +1,14 @@
+<div class="card__text">
+  <input
+    class="card__radio"
+    [class.card__radio-correct]="show && answer.type"
+    [class.card__radio-incorrect]="show && !answer.type"
+    [class.card__radio:not(:checked)]="!show"
+    type="radio"
+    id="{{ answer.id }}"
+    name="{{ name }}"
+    #someInput
+    (click)="handler(answer.id, answer.type, answer.title)"
+  >
+  <label class="card__answer" for="{{ answer.id }}">{{ answer.text }} </label>
+</div>
