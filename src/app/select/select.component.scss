@@ -1,0 +1,64 @@
+.select {
+  margin: 10px;
+  display: inline-block;
+  width: 230px;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    margin-right: 25px;
+  }
+
+  &__custom-select {
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+
+    padding: 0.7rem 1.4rem;
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__quote {
+    position: absolute;
+    z-index: -1;
+    top: 0.7rem;
+    right: 1.4rem;
+    color: rgba(0, 0, 0, 0.6);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &::after {
+      content: ':)';
+    }
+
+    &_open {
+      transform: rotate(-270deg);
+    }
+  }
+
+  &__options-wrapper {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    border: 0.2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__options {
+    padding: 0.7rem 1.4rem;
+
+    &:hover {
+      background-color: #b3d7ff;
+      cursor: pointer;
+    }
+  }
+}

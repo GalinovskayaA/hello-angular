@@ -83,13 +83,13 @@
 
   <div>
     <input type="text" placeholder="Enter your name" maxlength="50" [(ngModel)]="userName" (blur)="clear($event)">
-    <input type="password" placeholder="Enter your password" maxlength="50" [(ngModel)]="userPassword">
+    <app-select (onChanged)="onChangeTestName($event)"> </app-select>
     <button (click)="toggleCards()"> Go </button>
     <button (click)="startAgain()"> Again </button>
   </div>
 
   <div class="app__content" *ngIf="toggle; else noCards">
-    <div class="app__main-title"> Learning </div>
+    <div class="app__main-title"> Learning {{ testName }} </div>
     <app-card
       *ngFor="let question of selectedTest; index as index"
       [arrayQuestion]="question"
